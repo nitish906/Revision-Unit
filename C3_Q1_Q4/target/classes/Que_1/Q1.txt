@@ -1,0 +1,39 @@
+
+Q1/-  What do you mean by the IOC, explain the life cycle of the SpringBean.
+
+
+      When we want to create dependencies and we take the help of external entity to maintain the 
+      dependencies with simplified manner which is maintain by the IOC container..
+	  Basically Spring IOC is the Spring configuration which takes care about the dependencies injections, 
+	  Object creation and the manages the component of the objects in the "Spring configuration file" which 
+	  known as the Spring IOC.
+	
+     Spring Bean means the class who assosiate with spring container is known as spring bean.
+
+     in simple java classes constructor and finalize() methods are the  life cycle methods 
+     In spring spring container controls the spring bean life-cycle.
+     there is initalization and destroy methods.
+     There are 5 stages of spring bean class in life cycle
+
+     1)not exist
+     2)Instansiate
+     3)intialized
+     4)service
+     5)Destroy
+
+
+    1)At first there s no spring bean object exist.if bean object is singleton scope bean will load by container
+    at a time of loading xml file.
+
+
+   2)After this Container load the bean class into the memory and creates the bean class object 
+   also uses some property and value tags to insert data in bean fields.Also all the dependencies
+   is also resolved at a time of loading.
+
+  3) In any bean class if there is init method is configured container will call that method automatically.
+
+  4)In Service phase Container provides bean object ref to client,and client and call the service mthod on that 
+  bean object.
+
+  5)Same as init method we have to configure destroy method and call that method by bean object 
+  to destroy bean object.
